@@ -5,14 +5,15 @@
 		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' : '; } ?><?php bloginfo('name'); ?></title>
 
 		<link href="//www.google-analytics.com" rel="dns-prefetch">
-        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+
+		<link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
-<link rel="stylesheet" href="https://i.icomoon.io/public/temp/3e6d362a29/UntitledProject/style-svg.css">
-<script defer src="https://i.icomoon.io/public/temp/3e6d362a29/UntitledProject/svgxuse.js"></script>
+		<link rel="stylesheet" href="https://i.icomoon.io/public/temp/3e6d362a29/UntitledProject/style-svg.css">
+		<script defer src="https://i.icomoon.io/public/temp/3e6d362a29/UntitledProject/svgxuse.js"></script>
 
 		<!-- TYPEKIT / GOOGLE FONTS / FONTS.COM -->
 
@@ -23,11 +24,21 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-103664139-1', 'auto');
+		  ga('send', 'pageview');
+		</script>
+
 		<div class="page">
 
 		      <nav class="nav">
-		      <!-- Logo -->
-		      <a href="index.html"><img src="wp-content/themes/ahha-foundation-master/assets/dist/img/mbcfullcolorhoriz.svg" width="200" alt="logo" title="Midwest Business Consulting"></a>
+		      <!-- Logo --><a href="<?php bloginfo('url'); ?>">
+		      <a href=""><img src="<?php bloginfo('template_url'); ?>/assets/dist/img/mbcfullcolorhoriz.svg" width="200" alt="logo" title="Midwest Business Consulting"></a>
 
 		        <button id="hamb">
 		          <div id="rect1" class="showRect"></div>
@@ -36,12 +47,14 @@
 		        </button>
 		        <div id="slideDown" class="hidden">
 		        <!-- Navigation -->
-		          <ul class="pages">
-		            <li><a href="about.html">About</a></li>
-		    				<li><a href="services.html">Services</a></li>
-		    				<li><a href=" http://mbc_wp.dev/?page_id=6">Contact</a></li>
-		    				<li><a href="knowledge.html">Knowledge Base</a></li>
-		          </ul>
+						<!--<ul class="pages">
+							<li><a href="?page_id=4">About</a></li>
+							<li><a href="?page_id=8">Services</a></li>
+							<li><a href="?page_id=51">Industries</a></li>
+							<li><a href="?page_id=6">Contact</a></li>
+							<li><a href="?page_id=12">Knowledge Base</a></li>
+						</ul>-->
+		          <?php html5blank_nav(); ?>
 		          <ul class="social">
 		            <!-- Social Media -->
 		            <!-- Facebook -->

@@ -183,6 +183,21 @@ if (function_exists('register_sidebar'))
     ));
 }
 
+
+// If Dynamic Sidebar Exists
+if (function_exists('register_sidebar'))
+{
+    // Define Sidebar Widget Area 1
+    register_sidebar(array(
+        'name' => __('Contactbar', 'html5blank'),
+        'description' => __('This is a contact form...', 'html5blank'),
+        'id' => 'widget-area-2',
+        'before_widget' => '<div class="contactform" aside>',
+        'after_widget' => '</div /aside>',
+        'before_title' => '<h3>',
+        'after_title' => '</h3>'
+    ));
+}
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
 {

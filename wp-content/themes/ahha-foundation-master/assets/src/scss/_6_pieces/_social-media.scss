@@ -1,0 +1,22 @@
+/* Social Media */
+
+.social-media {
+  display: flex;
+  justify-content: center;
+
+    ul {
+      @include no-margin-padding;
+      @include no-bullets;
+
+      li {
+        display: inline-block;
+
+        a {
+
+          svg {
+            fill: currentColor;
+          }
+        }
+      }
+    }
+}

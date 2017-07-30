@@ -4,13 +4,33 @@
 
 /* GLOBAL */
 $baseurl 			: "/wp-content/themes/THEME-NAME";
-
+$font-path          : "#{$baseurl}/assets/dist/fonts";
 
 
 /* COLORS */
+$color-dark-blue: #333a56;
+$color-light-blue: #52658f;
+$color-gray: #e8e8e8;
+$color-tan: #f7f5e6;
+$color-white: #fff;
+$color-black:#000;
 
+/* FONT WEIGHTS */
+$weight-regular: 400;
+$weight-bold: 700;
 
+/* FONTS from Google Fonts
+    font-family: 'Merriweather', serif;
+    font-family: 'Open Sans', sans-serif;
+*/
+$opensans: "Open Sans";
+$merriweather: "Merriweather";
 
+@mixin opensans() {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
 
-
-/* FONTS */
+@mixin merriweather() {
+  font-family: 'Merriweather', serif;
+}

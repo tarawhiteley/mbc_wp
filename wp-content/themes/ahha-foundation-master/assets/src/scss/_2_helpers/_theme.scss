@@ -9,4 +9,14 @@
 
 
 // TYPOGRAPHY
+@mixin sans-serif() {
+  @include opensans;
+}
 
+mixin serif() {
+  @include merriweather;
+}
+
+
+
+// SPACING, MARGINS, AND PADDING

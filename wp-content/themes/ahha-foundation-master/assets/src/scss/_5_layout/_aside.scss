@@ -1,0 +1,128 @@
+/* ASIDE Layout */
+
+aside {
+
+  margin: 236px 50px 0 0;
+  clear: both;
+
+  .form {
+    width: 70%;
+    height: auto;
+    margin: 40px 30px 0 0;
+    border: 2px solid $color-dark-blue;
+    margin: auto;
+  }
+
+  legend {
+    border: none !important;
+    width: auto;
+    padding: 10px;
+    margin-bottom: 0;
+    color: $color-dark-blue;
+    font-family: merriweather;
+  }
+
+  #form_title {
+    background-color: $color-light-blue;
+    width: auto;
+    padding: 20px;
+    margin-top: 0;
+    border-bottom: 2px solid $color-dark-blue;
+    animation: color 3s ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+
+    @keyframes color {
+      0% {
+        background-color: $color-light-blue;
+      }
+      100% {
+        background-color: $color-dark-blue;
+      }
+    }
+
+    h2 {
+      font-family: $merriweather;
+      font-size: 1.4em;
+      color: $color-tan;
+      padding-left: 30px;
+    }
+
+    fieldset {
+      padding: 10px;
+      margin: 10px 30px;
+      border: 2px solid $color-dark-blue;
+    }
+
+    label {
+      display: inline;
+      text-align: right;
+    }
+
+    input[type="text"], textarea, input[type="text"]:hover, textarea:hover {
+      border: 1px solid $color-light-blue;
+      margin: 10px;
+      text-align: right;
+    }
+
+    #submit {
+      padding: 8px;
+      margin: 10px 0 20px 30px;
+      background-color: $color-dark-blue;
+      color: $color-white;
+      border: 1px solid $color-dark-blue;
+    }
+
+    #submit:hover {
+      background-color: $color-light-blue;
+    }
+
+    @media (min-width: 320px) {
+      fieldset, input[type="text"], textarea {
+        width: 70%;
+        margin: 10px auto;
+      }
+    }
+
+    @media (min-width: 600px) {
+      fieldset, input[type="text"], textarea {
+        width: 70%;
+        margin: 10px auto;
+      }
+    }
+
+    @media (min-width: 700px) {
+      .form {
+        width: 80%;
+        margin-top: 10px auto;      }
+
+      fieldset {
+        width: 80%;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .form {
+        width: 70%;
+      }
+    }
+
+    @media (min-width: 850px) {
+      .form {
+        width: 60%;
+      }
+    }
+
+/* aside grid settings in effect */
+    @media (min-width: 1060px) {
+      .form {
+        width: auto;
+        margin-right: 30px;
+      }
+      fieldset {
+        width: 80%
+      }
+    }
+
+  }

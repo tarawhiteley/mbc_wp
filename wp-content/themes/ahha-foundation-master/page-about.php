@@ -5,15 +5,17 @@ Template Name: About
 get_header(); ?>
 
 <header>
-  <img src="wp-content/themes/ahha-foundation-master/assets/dist/img/mbc.jpg" alt="the Midwest Business Consulting team" title="MBC can consult with you on your needs.">
+  <img src="<?php bloginfo('template_url'); ?>/assets/dist/img/mbc.jpg" alt="the Midwest Business Consulting team" title="MBC can consult with you on your needs.">
 </header>
 
 <main class="aboutpage">
   <h2>Our Story</h2>
+  <div class="floatleft">
+    <img src="<?php bloginfo('template_url'); ?>/assets/dist/img/bernie.jpg" alt="Bernard Dier" title="Bernard Deir, MBA, PMP" class="headshot">
+    <p>Bernard Deir</p>
+  <div>
 
-  <img src="wp-content/themes/ahha-foundation-master/assets/dist/img/bernie.jpg" alt="Bernard Dier" title="Bernard Deir, MBA, PMP" class="floatright headshot">
-
-  <p class="floatleft aboutbody">Bernard Deir started Midwest Business Consulting in 2012 with the vision of providing small and mediumsized clients with a value-based alternative to world-class business and project-based consulting services. Bernard is an operations and project management professional with more than 18 years experience successfully building world-class operations in various industries including: commercial aviation, bulk fuel storage and distribution, Government, commercial food service, manufacturing, maintenance, security and personal consumer products.</p>
+  <p class="floatright aboutbody">Bernard Deir started Midwest Business Consulting in 2012 with the vision of providing small and mediumsized clients with a value-based alternative to world-class business and project-based consulting services. Bernard is an operations and project management professional with more than 18 years experience successfully building world-class operations in various industries including: commercial aviation, bulk fuel storage and distribution, Government, commercial food service, manufacturing, maintenance, security and personal consumer products.</p>
 
   <h2>Our Mission</h2>
 

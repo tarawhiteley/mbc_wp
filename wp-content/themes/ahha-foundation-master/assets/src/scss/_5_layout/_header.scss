@@ -1,31 +1,221 @@
 /*------------------------------------*\
-    #HEADER
+    #NAV
 \*------------------------------------*/
+.nav {
+	width: 100%;
+	height: auto;
+	background: white;
+	padding: 10px 0;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	text-align: center;
 
-header { 
+	img {
+		width: 50%;
+		margin: 0 10px;
+		vertical-align: -150%;
+	}
 
+	/* logo responsiveness */
+	@media (min-width: 700px){
+		img {
+			width: 40%;
+		}
+	}
+
+	@media (min-width: 800px){
+		img {
+			width: 35%;
+		}
+	}
+
+	@media (min-width: 900px){
+		img {
+			width: 30%;
+			margin: 0 20px;
+		}
+	}
+
+	@media (min-width: 1060px){
+		img {
+			width: 25%;
+		}
+	}
+
+	.pages, .social {
+		display: inline-block;
+		padding-top: 20px;
+	}
+
+	ul {
+		width: 100%;
+		height: auto;
+		@include no-margin-padding;
+		@include no-bullets;
+
+		li {
+			display: inline;
+			width: 100%;
+			padding: 0 20px;
+
+			a {
+		    color: $color-dark-blue;
+				font-size: 1.4em;
+				text-decoration: none;
+
+			    &:hover {
+			      color: $color-light-blue;
+						opacity: 0.9;
+			    }
+
+				svg {
+				    fill: currentColor;
+						padding: 0;
+			  	}
+			}
+
+		}
+	}
 }
 
 
 
+/*HAMBURGER MENU */
+@media (max-width: 700px) {
 
+
+	#hamb {
+	  position: relative;
+		float: right;
+	  width: 40px;
+	  height: 40px;
+	  padding: .5%;
+	  margin: 10px 1%;
+	  box-sizing: border-box;
+	  background-color: $color-white;
+	  border: none;
+	}
+
+	#hamb:focus{outline: none;}
+
+	#hamb:hover .rect
+	{
+	  background-color: $color-light-blue;
+	}
+
+	p.copyWrite {
+	  position: relative;
+	  width: 100%;
+	  margin: 20px auto;
+	  color: $color-dark-blue;
+	  font-size: .8rem;
+		padding: 20px;
+	}
+
+	#slideDown ul {
+	  position: relative;
+	  width: 90%;
+	  margin: 20px 5% 20px 5%;
+	  font-size: 1em;
+		display: block;
+	}
+
+	#slideDown ul li {
+	  position: relative;
+	  width: 20%;
+	  margin: 0 auto;
+	  text-align: center;
+		padding: 20px;
+	}
+
+	/*THE NUMBERS ARE IMPORTANT FOR THIS. MAKE SURE YOUR RECTANGLES ARE 'something1', 'something2', 'something3' */
+	#rect1, #rect2, #rect3
+	{
+	  /*THIS IS JUST STYLING*/
+	  position: relative; float: left;
+	  width: 100%;
+	  height: 5px;
+	  background-color: $color-dark-blue;
+
+	  /*THIS IS WHAT MAKES YOUR HAMBURGER RECTANGLES SLIDE INTO AN 'X'*/
+	  -webkit-transition: all 0.3s ease-out;
+	     -moz-transition: all 0.3s ease-out;
+	       -o-transition: all 0.3s ease-out;
+	          transition: all 0.3s ease-out;
+	}
+
+	#slideDown
+	{
+	  /*AGAIN, JUST STYLING*/
+	  position: relative; float: left;
+	  color: #fff;
+	  overflow: hidden;
+	  width: 100%;
+		height: auto;
+	  border-top: 1px solid #fff;
+
+	  /*AGAIN, THIS MAKES YOUR HIDDEN NAV SLIDE INSTEAD OF APPEAR*/
+	  -webkit-transition: all 0.5s ease-out;
+	     -moz-transition: all 0.5s ease-out;
+	       -o-transition: all 0.5s ease-out;
+	          transition: all 0.5s ease-out;
+	}
+
+	.navhidden
+	{
+	  /*THIS IS WHAT CHANGES TO HIDE YOUR MENU. THIS NEEDS TO BE '0'*/
+	  max-height: 0px;
+	}
+
+	.revealed
+	{
+	  /*AN APPROXIMATION OF YOUR NAV'S EXTENDED HEIGHT. IF THIS IS TOO HIGH, IT WILL LAG BEFORE CLOSING*/
+	  height: auto;
+	}
+
+	.showRect /*YOU CAN NAME ME. FOLLOW INSTRUCTIONS IN THE JS*/
+	{
+	  /*DEFAULT STYLING FOR YOUR LITTLE HAMBURGER RECTANGLES*/
+	  display: block;
+	  margin: 2px 0 2px 0;
+	}
+
+	.hideRectX /*YOU CAN NAME ME. FOLLOW INSTRUCTIONS IN THE JS*/
+	{
+	  /*THE STYLING FOR YOUR MIDDLE RECTANGLE, WHICH DISSAPEARS*/
+	  display: none;
+	}
+
+	.topRectX /*YOU CAN NAME ME. FOLLOW INSTRUCTIONS IN THE JS*/
+	{
+	  /*THE STYLING FOR YOUR TOP RECTANGLE*/
+	  margin: 4px 0 4px 0;
+
+	  /*THIS ROTATES YOUR TOP RECTANGLE INTO ITS 'X' POSITION*/
+	   -webkit-transform: rotate(45deg);
+	      -moz-transform: rotate(45deg);
+	           transform: rotate(45deg);
+	}
+
+	.bottomRectX /*YOU CAN NAME ME. FOLLOW INSTRUCTIONS IN THE JS*/
+	{
+	  /*THE STYLING FOR YOUR BOTTOM RECTANGLE*/
+	  margin: -8px 0 4px 0;
+
+	  /*THIS ROTATES YOUR BOTTOM RECTANGLE INTO ITS 'X' POSITION*/
+	  -webkit-transform: rotate(-45deg);
+	     -moz-transform: rotate(-45deg);
+	           transform: rotate(-45deg);
+	}
+}
 
 /*------------------------------------*\
-    #NAV
+    #HEADER
 \*------------------------------------*/
 
-.nav {
-		
-	ul { 
-		@extend %no-bullets;
-		
-		> li { 
-			
-			> a { 
-
-				&:hover { 
-				}
-			}
-		}
-	}
+header img {
+	width: 100%;
+	margin-top: 169px;
 }
