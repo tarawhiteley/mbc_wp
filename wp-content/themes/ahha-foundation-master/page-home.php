@@ -52,5 +52,4 @@ get_header(); ?>
   </div>
 </main>
 
-<?php get_sidebar(Contactbar); ?>
 <?php get_footer(); ?>

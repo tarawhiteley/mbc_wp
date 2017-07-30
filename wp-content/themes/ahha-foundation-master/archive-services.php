@@ -15,9 +15,9 @@
             <p><?php the_content(); ?></p>
       </article>
     <?php endwhile; endif; ?>
-
+<?php get_sidebar(); ?>
   </section>
 </main>
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

@@ -104,8 +104,8 @@ function html5blank_header_scripts()
 function html5blank_conditional_scripts()
 {
     // if (is_page('pagenamehere')) {
-    //     wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery', 'ahha-js'), '1.0.0'); // Conditional script(s)
-    //     wp_enqueue_script('scriptname'); // Enqueue it!
+    wp_register_script('main-js', get_template_directory_uri() . '/assets/dist/js/main.js', array('jquery', 'ahha-js'), '1.0.0'); // Conditional script(s)
+    wp_enqueue_script('main-js'); // Enqueue it!
     // }
 }
 
@@ -184,20 +184,7 @@ if (function_exists('register_sidebar'))
 }
 
 
-// If Dynamic Sidebar Exists
-if (function_exists('register_sidebar'))
-{
-    // Define Sidebar Widget Area 1
-    register_sidebar(array(
-        'name' => __('Contactbar', 'html5blank'),
-        'description' => __('This is a contact form...', 'html5blank'),
-        'id' => 'widget-area-2',
-        'before_widget' => '<div class="contactform" aside>',
-        'after_widget' => '</div /aside>',
-        'before_title' => '<h3>',
-        'after_title' => '</h3>'
-    ));
-}
+
 // Remove wp_head() injected Recent Comment styles
 function my_remove_recent_comments_style()
 {
